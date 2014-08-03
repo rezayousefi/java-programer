@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+/**
+ * Created by Reza on 17/07/2014.
+ */
+public class LetterGrades
+{
+    public static void main (String [] args)
+    {
+        int total = 0;
+        int gradeCounter = 0;
+        int aCount = 0;
+        int bCount = 0;
+        int cCount = 0;
+        int dCount = 0;
+        int fCount = 0;
+        int grade;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.printf("%s\n%s\n   %s\n   %s\n" ,
+        "Enter the integar grades in the range 0-100." ,
+        "Type the end-of-file indicator to terminate input:" ,
+        "on UNIX/Linux/Mac os x type <ctrl> d then  press Enter" ,
+         "on Windows type <ctrl> z then press Enter");
+
+        while (input.hasNext())
+        {
+            grade = input.nextInt();
+            total += grade;
+            ++gradeCounter;
+
+            switch (grade / 10)
+            {
+                case 9:
+                case 10:
+                    ++aCount;
+                    break;
+                case 8:
+                    ++bCount;
+                    break;
+                case 7:
+                    ++cCount;
+                    break;
+                case 6:
+                    ++dCount;
+                    break;
+                case 5:
+                    ++fCount;
+                    break;
+            }
+        }
+        System.out.println("\nGrade report:");
+
+        if (gradeCounter != 0)
+        {
+            double average = (double) total / gradeCounter;
+
+            System.out.printf("total of the enterd is %d\n ," +
+                gradeCounter , total);
+            System.out.printf("Class average is %.2f\n" , average);
+            System.out.printf("%s\n%d\n%s\n%d\n%s\n%d\n" ,
+                    "Number of students who received each grade:" ,
+                    "A:" ,aCount ,
+                    "B:" ,bCount ,
+                    "C:" ,cCount ,
+                    "D:" ,dCount ,
+                    "F:" ,fCount);
+        }
+        else
+            System.out.println("No grade were entered");
+    }
+}
