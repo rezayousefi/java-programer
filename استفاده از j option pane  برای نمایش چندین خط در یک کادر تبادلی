@@ -1,0 +1,10 @@
+/**
+ * Created by Reza on 14/07/2014.
+ */
+public class Dialog1
+{
+    public static void main (String [] args)
+    {
+        JOptionPane.showMessageDialog( null , "Welcome\nto\nJava");
+    }
+}
