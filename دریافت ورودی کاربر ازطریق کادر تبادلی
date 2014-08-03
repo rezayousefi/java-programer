@@ -1,0 +1,14 @@
+/**
+ * Created by Reza on 14/07/2014.
+ */
+public class newDialog
+{
+    public static void main (String [] args)
+    {
+        String name = JOption.showInputDialog ("What is your  name?");
+
+        String message = String.format("welcome, %s, to java Programming!" , name);
+
+        JOption.showMessageDialog ( null , message);
+    }
+}
