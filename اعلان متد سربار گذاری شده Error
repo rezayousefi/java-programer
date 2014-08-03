@@ -1,0 +1,14 @@
+/**
+ * Created by Reza on 19/07/2014.*ص 187*
+ */
+public class MethodOverLoadError
+{
+    public static int square (int x)
+    {
+        return x * x;
+    }
+    public static double dquare (double y)
+    {
+        return y * y;
+    }
+}
